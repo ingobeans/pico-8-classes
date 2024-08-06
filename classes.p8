@@ -39,6 +39,9 @@ end
 -->8
 --pico-8 classes impl
 
+--github
+--https://github.com/ingobeans/pico-8-classes
+
 function copy(t)
 	--shallow copy table
 	n = {}
