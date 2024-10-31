@@ -2,7 +2,7 @@
 
 basic classes implementation for pico-8.
 
-# example uasge
+# example usage
 ```lua
 --define an 'animal' class
 animal = class({
