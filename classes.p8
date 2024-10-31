@@ -77,23 +77,26 @@ function dump(t,ind)
 	return s
 end
 
+classes = {}
 function class(t, extends)
 	--function for defining
 	--classes
-	c = extends or {
-		new=function(d)
-			n = copy(c)
-			for k,v in pairs(d) do
+	local id = #classes+1
+	local c = extends or {
+		new=function(t)
+			local n = copy(classes[id])
+			for k,v in pairs(t) do
 				n[k] = v
 			end
 			n.new = nil
-			n.class = c
 			return n
-		end
+		end,
+		class_id=id
 	}
 	for k,v in pairs(t) do
 		c[k] = v
 	end
+	add(classes,c)
 	return c
 end
 __gfx__
