@@ -76,7 +76,8 @@ end
 
 # optional add-on
 ```lua
---function that prints out a table in full
+--function that stringifies a table in full
+--to make it printable
 
 function dump(t,ind)
 	--stringify table
